@@ -1,5 +1,6 @@
 from ProfPractice_OptionOne import optionOne
-from network
+from network import network
+from Professional_Practice_Software import main  
 def main():
     print("what problem do you have today?")
     print("1. Hardware Support")
@@ -21,7 +22,7 @@ def main():
 
     elif userChoice == 3:
         print("you have selected option 3")
-        #optionThree()
+        network()
 
     elif userChoice == 4:
         print("you have selected option 4")
