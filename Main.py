@@ -1,4 +1,5 @@
 from ProfPractice_OptionOne import optionOne
+from network
 def main():
     print("what problem do you have today?")
     print("1. Hardware Support")
