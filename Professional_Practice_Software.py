@@ -1,6 +1,6 @@
-import Professional_Practice_Main
+import Main
 
-def main():
+def software():
     print("You have selected software issue")
     while True:
         print("Which catagory would you like to select:\n" 
@@ -311,7 +311,7 @@ def File():
 
 def Return():
     print("")
-    Professional_Practice_Main.Main()
+    Main.main()
 
 if __name__=="__main__":
-    main()
+    software()
