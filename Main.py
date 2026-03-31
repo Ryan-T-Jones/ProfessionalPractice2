@@ -1,4 +1,4 @@
-from Professional_Practice_Hardware import optionOne
+from Professional_Practice_Hardware import hardware
 from Professional_Practice_Network import network
 from Professional_Practice_Software import software
 def main():
@@ -15,7 +15,7 @@ def main():
     
         if userChoice == 1:
             print("you have selected option 1")
-            optionOne()
+            hardware()
     
         elif userChoice == 2:
             print("you have selected option 2")
