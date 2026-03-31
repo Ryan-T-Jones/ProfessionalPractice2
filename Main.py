@@ -1,6 +1,6 @@
-from Professional_Practice_Hardware import hardware
-from Professional_Practice_Network import network
-from Professional_Practice_Software import software
+import Professional_Practice_Hardware
+import Professional_Practice_Network 
+import Professional_Practice_Software 
 def main():
     while True:
         print("what problem do you have today?")
@@ -15,15 +15,15 @@ def main():
     
         if userChoice == 1:
             print("you have selected option 1")
-            hardware()
+            Professional_Practice_Hardware.hardware()
     
         elif userChoice == 2:
             print("you have selected option 2")
-            software()
+            Professional_Practice_Software.software()
     
         elif userChoice == 3:
             print("you have selected option 3")
-            network()
+            Professional_Practice_Software.network()
     
         elif userChoice == 4:
             print("you have selected option 4")
