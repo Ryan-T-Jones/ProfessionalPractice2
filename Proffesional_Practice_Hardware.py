@@ -1,5 +1,5 @@
 
-def optionOne():
+def hardware():
     print("You have selected Option 1: Hardware support.")
     print("which category dop you need help with:\n"
               "1.Computer system\n"
