@@ -34,12 +34,12 @@ def Performance():
     print("You have selected performance issue")
     while True:
         print("Low performance can be caused by multiple factors:\n" 
-        "1:High CPU usage. Symptoms inculde:\n" 
-        "2:High RAM usage. Symptoms inculde:\n" 
-        "3:High memory usage. Symptoms inculde:\n" 
-        "4:Malware. Symptoms inculde:\n" 
-        "5:High network bandwidth. Symptoms inculde:\n" 
-        "6:Hardware issues. Symptoms inculde:")
+        "1:High CPU usage.\n" 
+        "2:High RAM usage.\n" 
+        "3:High memory usage.\n" 
+        "4:Malware.\n" 
+        "5:High network bandwidth.\n" 
+        "6:Hardware issues.")
         print("To Solve your problem more information is required.\n" 
         "Please select from the list above of the potential issues to find how to diagnose the issue and a solution")
         #To imporve, user would enter specific symptoms and the program would able to detect issue
@@ -102,13 +102,22 @@ def Performance():
                     "1:Close specific applications that have high RAM usage that are not being used.Ensure not to close nessecary application, if unsure search online first before closing.\n"
                     "2:If the application being activly used has high RAM usage then check applications settings for optimaisation options or for potential updates. If the options are unavailable eithier switch application or follow other methods to reduce RAM usage.\n" 
                     "3:Clear Cache in both the browser and the computer. In a bowser this option will be located in the browser setting usually under privacy and security option. To clear a computers cache go to settings then storage and the option should appear.\n"
-                    "4:.\n"
+                    "4:Check for malware or suspicious applications that have high resource usage.\n"
                     "5:Reboot the device, a reboot can remove old programs, fix memory leaks and stop unnecessary services providing a standard environment at regual performance.\n"
                     )
 
                 case "3"|"High memory usage" if Response_Type=="2":
-                    print("Solution:")
-            Return()
+                    print("There are multiple solutions it is best to try each one until the problem is resolved.\n"
+                          "1:Clear the recylce bin located on the desktop or in the file explorer under home, it stores deleted data but still takes up space.\n"
+                          "2:Run windows file cleanup, enter setting and select storage, an option to cleanup files should appear.This removes files from downloads and delete unused system files.\n"
+                          "3:Manually check and remove unused data or duplicate files that take up additional storage.\n"
+                          "4:Unistall application through the correct methods by entering settings and select apps, then select installed apps and unistall unwanted application. Manual deletion can cause some files to remain if not careful.\n"
+                          "5:Create backups of old but wanted data on external drives to save space on the main device.\n")
+            if Response_Type==1 or Response_Type==2:
+                    Return()
+            else:
+                pass
+            #
         except:
             print("")
 
@@ -186,29 +195,50 @@ def Application():
     while True:
         print("Below is a list of Application options available to select from:\n"  
         "1:Email issue.\n" 
-        "2:Microsoft product.\n" 
-        "3:Software compatability.\n" 
-        "4:Download and transfer.\n"
-        "5:Return.")
+        "2:Software compatability.\n" 
+        "3:Return.")
         print("Please select from the list above of the potential issues to find how to diagnose the issue and a solution")
-        #To imporve,
         try:
             Response=input(": ")
             Response.strip().lower()
             match Response:
-                case "1"|"Email issue":
-                    print("")
-                case "2"|"Microsoft product":
-                    print(""
-                    "1.Word\n"
-                    "2.Excel\n"
-                    "3.Teams\n")
-                case "3"|"Software compatability issue":
-                    print("")
-                case "5"|"Return":
+                case "1"|"email issue":
+                    print("1.Unable to send emails\n"
+                    "2.unable to receive email\n"
+                    "3.Attachment issues\n")
+                case "2"|"software compatability issue":
+                    print("1.Software not installing\n"
+                    "2.Application error\n")
+                case "3"|"return":
                     break
             #
-            Return()
+            while True:
+                Response_Number=input(": ")
+                match Response:
+                    case "1"|"email issue" if Response_Number=="1":
+                        print("1:Check internet connection, no internet or a weak signal can result in emails not loading or aperaring.\n"
+                        "2:Check different email folders, emails might get catagorised as spam or other.\n" 
+                        "3:Check sender is not block or contains blocked content, check that the sender is not blocked by you or the administration.\n")
+                    case "1"|"email issue" if Response_Number=="2":
+                        print("1:Check internet connection, no internet or a weak signal can result in emails not sending.\n"
+                        "2:Check that the recipient's address has been entered correctly, a typing error can lead to the email being send to an invalid account.\n" 
+                        "3:Check recipient is not block or email does not contain blocked content, check that the recipient is not blocked by you or the administration.")
+                    case "1"|"email issue" if Response_Number=="3":
+                        print("1:If attachment is too large the email will not be able to be sent, eithier send content seperatly or compress file.\n"
+                        "2:Blocked file type, some file types are block and will result in the email not sending or being block, send the content seperatly or zip the file.")
+                    case "2"|"software compatability issue" if Response_Number=="1":
+                        print("1:Not enough storage space, if there is not enough space in storage available the application will not install, check storage and create space before installing.\n"
+                              "2:Software secuirty risk, the application might get flagged as malware or other security risk by the administration or operating system, check application is safe and authorised and eithier run as administrator or check security settings.\n"
+                              "3:Software is incompatable, check that the software is for the correct operating system and the device meets the software requirements.")
+                    case "2"|"software compatability issue" if Response_Number=="2":
+                        print("1:Check software was installed correctly and is a compatable version, check that no files have corrupted or other software is needed.\n"
+                              "2:Close and restart the software or the device, temporary issues can be fixed by restarting the software.\n"
+                              "3:Check for available updates, the issue could be caused by running an older version of the software so an update can fix potential issues.")
+                if Response_Number==1 or Response_Number==2 or Response_Number==3 or Response_Number==4:
+                    Return()
+                else:
+                    pass
+            #
         except:
             print("")
 
@@ -263,11 +293,11 @@ def File():
                     case "2"|"File storage" if Response_Number=="3":
                        print("One drive is connected the windows account, available from file explorer, the data saved is available on any device connected to the account. If unavailable check internet connection or check if your signed in from the system tray.")
                     case "3"|"Data loss and backup failures" if Response_Number=="1":
-                        print("File corruption:")#
+                        print("If a file is corrupted attempt to find a past version of the file from backups to use instead, some files may have alternate ways to access and recover some data. If system files are corrupted windows has a system file checker tool, to use it search online for the exact steps to use it.")
                     case "3"|"Data loss and backup failures" if Response_Number=="2":
-                        print("Create backup:")#
+                        print("Winodws has a built in backup system with one drive, enable one drive backup to upload file to one drive. External methods can be used by connecting an external drive and saving data to it through control panel then select file history to backup all files.")
                     case "3"|"Data loss and backup failures" if Response_Number=="3":
-                        print("Recover data:")#
+                        print("Windows has a built in backup system with one drive, open one drive and redownload any data lost. If data was deleteted it will be located in the recycle bin located on the desktop.")
                     case "4"|"Download and transfer" if Response_Number=="1":
                         print("When downloading software make sure it is compatable with the correct operating system version. When downloading data ensure it is the correct file type for use and is safe to download.")
                     case "4"|"Download and transfer" if Response_Number=="2":
