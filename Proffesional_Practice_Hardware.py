@@ -54,4 +54,4 @@ def peripheral():
 
 
 if __name__=="__main__":
-    optionOne()
+    hardware()
