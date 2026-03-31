@@ -1,5 +1,3 @@
-import Main
-
 def software():
     print("You have selected software issue")
     while True:
@@ -11,7 +9,7 @@ def software():
         "5:Return")
         try:
             Response=input(": ")
-            Response.strip().lower()
+            Response=Response.strip().lower()
             match Response:
                 case "1"|"performance":
                     print("performance")
@@ -26,24 +24,25 @@ def software():
                     print("")
                     File()
                 case "5"|"Return":
-                    Return()
+                    #Return()
+                    return
         except:
             print("")
 
 def Performance():
     print("You have selected performance issue")
     while True:
-        print("Low performance can be caused by multiple factors:\n" 
-        "1:High CPU usage.\n" 
-        "2:High RAM usage.\n" 
-        "3:High memory usage.\n" 
-        "4:Malware.\n" 
-        "5:High network bandwidth.\n" 
-        "6:Hardware issues.")
-        print("To Solve your problem more information is required.\n" 
-        "Please select from the list above of the potential issues to find how to diagnose the issue and a solution")
-        #To imporve, user would enter specific symptoms and the program would able to detect issue
         try:
+            print("Low performance can be caused by multiple factors:\n" 
+            "1:High CPU usage.\n" 
+            "2:High RAM usage.\n" 
+            "3:High memory usage.\n" 
+            "4:Malware.\n" 
+            "5:High network bandwidth.\n" 
+            "6:Hardware issues.")
+            print("To Solve your problem more information is required.\n" 
+            "Please select from the list above of the potential issues to find how to diagnose the issue and a solution")
+            #To imporve, user would enter specific symptoms and the program would able to detect issue
             Response=input(":").strip().lower()
             print("Enter 1 for help diagnosing the problem. Enter 2 for help resolving the problem")
             Response_Type=input(": ").strip().lower()
@@ -66,9 +65,9 @@ def Performance():
                     Alternative_Response=input("For more accurate information to diagnose or resolve please select security option")
                     #check
                     if Alternative_Response=="yes":
-                        Return()
+                        return
                     else:
-                        print("")
+                        pass
 
                 #Network
                 case "5"|"High network bandwidth" if Response_Type=="1":
@@ -76,9 +75,9 @@ def Performance():
                     Alternative_Response=input("For more accurate information to diagnose or resolve please select network option")
                     #check
                     if Alternative_Response=="yes":
-                        Return()
+                        return()
                     else:
-                        print("")
+                        pass
 
                 #Hardware
                 case "6"|"Hardware issues" if Response_Type=="1":
@@ -86,9 +85,9 @@ def Performance():
                     Alternative_Response=input("For more accurate information to diagnose or resolve please select hardware option")
                     #check
                     if Alternative_Response=="yes":
-                        Return()
+                        return()
                     else:
-                        print("")
+                        pass
                 case "1"|"High CPU usage" if Response_Type=="2":
                     print("There are multiple solutions it is best to try each one until the problem is resolved.\n"
                     "1:Close specific applications that have high CPU usage that are not being used.Ensure not to close nessecary application, if unsure search online first before closing.\n"
@@ -113,13 +112,9 @@ def Performance():
                           "3:Manually check and remove unused data or duplicate files that take up additional storage.\n"
                           "4:Unistall application through the correct methods by entering settings and select apps, then select installed apps and unistall unwanted application. Manual deletion can cause some files to remain if not careful.\n"
                           "5:Create backups of old but wanted data on external drives to save space on the main device.\n")
-            if Response_Type==1 or Response_Type==2:
-                    Return()
-            else:
-                pass
-            #
         except:
             print("")
+        return
 
 def Settings():
     print("You have selected Settings issue")
@@ -134,7 +129,7 @@ def Settings():
         #To imporve, user would enter specific setting or describe a change and the program would give a setting
         try:
             Response=input(": ")
-            Response.strip().lower()
+            Response=Response.strip().lower()
             match Response:
                 case "1"|"Audio":
                     print("1.no sound playing from computer\n"
@@ -182,13 +177,13 @@ def Settings():
                        print("Enter settings then select power, there are options to reduce the energy consumption. One option is energy saver mode which reduce power consumption and increases battery life. Other options are also available.")
                     case "4"|"Maintenance" if Response_Number=="3":
                         print("Enter settings then select storage, this will display availble storage locations and storage allocation of software. If storage is full eitier increase physical storage or delete unused files. Do not delete neccessary files.")
-                if Response_Number==1 or Response_Number==2 or Response_Number==3:
-                    Return()
+                if Response_Number=="1" or Response_Number=="2" or Response_Number=="3":
+                    break
                 else:
                     pass
-            #
         except:
             print("")
+    return
     
 def Application():
     print("You have selected file issue")
@@ -200,7 +195,7 @@ def Application():
         print("Please select from the list above of the potential issues to find how to diagnose the issue and a solution")
         try:
             Response=input(": ")
-            Response.strip().lower()
+            Response=Response.strip().lower()
             match Response:
                 case "1"|"email issue":
                     print("1.Unable to send emails\n"
@@ -234,13 +229,13 @@ def Application():
                         print("1:Check software was installed correctly and is a compatable version, check that no files have corrupted or other software is needed.\n"
                               "2:Close and restart the software or the device, temporary issues can be fixed by restarting the software.\n"
                               "3:Check for available updates, the issue could be caused by running an older version of the software so an update can fix potential issues.")
-                if Response_Number==1 or Response_Number==2 or Response_Number==3 or Response_Number==4:
-                    Return()
+                if Response_Number=="1" or Response_Number=="2":
+                    break
                 else:
                     pass
-            #
         except:
             print("")
+    return
 
 def File():
     print("You have selected file issue")
@@ -255,7 +250,7 @@ def File():
         #To imporve,
         try:
             Response=input(": ")
-            Response.strip().lower()
+            Response=Response.strip().lower()
             match Response:
                 case "1"|"File management":
                     print(""
@@ -280,7 +275,7 @@ def File():
             #
             while True:
                 Response_Number=input(": ")
-                Response_Number.strip().lower()
+                Response_Number=Response.strip().lower()
                 match Response:
                     case "1"|"File management" if Response_Number=="1":
                         print("Some drives may require different permission's to access or save too, if you are unable to access or use a drive check if the location being access is correct and the inform IT to update account permissions.")
@@ -302,16 +297,14 @@ def File():
                         print("When downloading software make sure it is compatable with the correct operating system version. When downloading data ensure it is the correct file type for use and is safe to download.")
                     case "4"|"Download and transfer" if Response_Number=="2":
                        print("Data can be transfered by shared storage software such as: drives, cloud storage, one drive or email. External hardware: USB, external hard drive or wired connection. File size can affect how data is sent file.")
-                if Response_Number==1 or Response_Number==2 or Response_Number==3:
-                    Return()
+                if Response_Number=="1" or Response_Number=="2" or Response_Number=="3":
+                    break
                 else:
                     pass
         except:
             print("")
+    return
 
-def Return():
-    print("")
-    Main.main()
 
 if __name__=="__main__":
     software()
