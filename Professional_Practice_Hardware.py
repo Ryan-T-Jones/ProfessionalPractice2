@@ -3,7 +3,8 @@ def hardware():
     print("You have selected Option 1: Hardware support.")
     print("which category dop you need help with:\n"
               "1.Computer system\n"
-              "2.Peripherals")
+              "2.Peripherals\n"
+              "3.Exit")
   
     Choice = input("please select one of the options")
     Choice = int(Choice)
@@ -15,8 +16,12 @@ def hardware():
     elif Choice ==2:
         print("You have selected Peripheral support")
         peripheral()
+
+    elif Choice ==3:
+        Main.main()
+    
     else:
-        print("please select either 1 or 2:")
+        print("please select either 1-3:")
 
 def computerSystem():
     print("Please specify the problem with the system:\n" 
@@ -55,10 +60,9 @@ def computerSystem():
         print("Use the 'run' command, type '%temp%' and deletethose temporary files to free up some space \n" \
         "If your hard disk is running slow, use the built in defragmentation software from windows to optimise the speed of ur drives\n" \
         "Always ensure that there is plenty of spare space in your drive because, if its too full it will slow down.")
-
+   
     elif Choice1==5:
         Main.main()
-
     
     else:
         print("please select an option between 1-5")
