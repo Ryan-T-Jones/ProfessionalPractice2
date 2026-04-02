@@ -5,7 +5,7 @@ def hardware():
               "1.Computer system\n"
               "2.Peripherals")
   
-    Choice = input("please selct one of the options")
+    Choice = input("please select one of the options")
     Choice = int(Choice)
 
     if Choice ==1:
@@ -52,7 +52,7 @@ def computerSystem():
 def peripheral():
     print("You have selected Option 2: Perihperal support.\n"
           "Here is some tips and information that may be helpful for keyboards, mice, printers, etc.\n")
-    print("Make sure thqat the peripheral is connected correctly to the system using the correct port, wires or connection type needed.\n"
+    print("Make sure that the peripheral is connected correctly to the system using the correct port, wires or connection type needed.\n"
           "Make sure that any necessary drivers for the peripheral are downloaded onto your system. \n"
           "Make sure that your system supports the specific peripheral that you are wishing to use.")
 
