@@ -1,4 +1,4 @@
-
+import Main
 def hardware():
     print("You have selected Option 1: Hardware support.")
     print("which category dop you need help with:\n"
@@ -47,7 +47,22 @@ def computerSystem():
               "Here is some information that may be useful\n")
         print("Make sure the display and system are connected porperly with the correct cable \n"
               "Ensure that the display is connected to correct port on the I/O shield or graphics card of the system\n" \
-              "MAke sure the Display has sufficient power to it")
+              "Make sure the Display has sufficient power to it")
+    
+    elif Choice1==4:
+        print("You have selected Storage Problems\n" \
+        "Here is some information that may be useful\n")
+        print("Use the 'run' command, type '%temp%' and deletethose temporary files to free up some space \n" \
+        "If your hard disk is running slow, use the built in defragmentation software from windows to optimise the speed of ur drives\n" \
+        "Always ensure that there is plenty of spare space in your drive because, if its too full it will slow down.")
+
+    elif Choice1==5:
+        Main.main()
+
+    
+    else:
+        print("please select an option between 1-5")
+        return
 
 def peripheral():
     print("You have selected Option 2: Perihperal support.\n"
