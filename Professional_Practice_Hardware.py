@@ -28,7 +28,8 @@ def computerSystem():
     "1.Overheating\n" \
     "2.No Power\n" \
     "3.Display Issues\n"
-    "4.Storage Issues")
+    "4.Storage Issues\n"
+    "5. Exit")
 
     Choice1=input("Please select an option:")
     Choice1=int(Choice1)
