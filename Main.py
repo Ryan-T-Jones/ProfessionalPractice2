@@ -13,7 +13,7 @@ def main():
         print("2. Software Support")
         print("3. Network Support")
         print("4. Security Support")
-        print("5. Other")
+    
     
         userChoice = input("Please select an option:")
         userChoice = int(userChoice)
@@ -33,10 +33,6 @@ def main():
         elif userChoice == 4:
             print("you have selected option 4")
             login_system.main()
-    
-        elif userChoice == 5:
-            print("you have selected option 5")
-            #optionFive()
     
         else:
             print("Please select an option from the above list 1-5")
