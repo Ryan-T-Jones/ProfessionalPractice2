@@ -46,6 +46,7 @@ def login():
                 return
     #If password incorrect prints login failed
     print("Login failed")
+    return
 
 #Defining menu function
 def main():
