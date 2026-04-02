@@ -2,6 +2,8 @@ import Professional_Practice_Hardware
 import Professional_Practice_Network 
 import Professional_Practice_Software 
 import Professional_Practice_Login 
+import os
+import hashlib
 
 def main():
     while True:
