@@ -50,7 +50,11 @@ def computerSystem():
               "MAke sure the Display has sufficient power to it")
 
 def peripheral():
-    print("")
+    print("You have selected Option 2: Perihperal support.\n"
+          "Here is some tips and information that may be helpful for keyboards, mice, printers, etc.\n")
+    print("Make sure thqat the peripheral is connected correctly to the system using the correct port, wires or connection type needed.\n"
+          "Make sure that any necessary drivers for the peripheral are downloaded onto your system. \n"
+          "Make sure that your system supports the specific peripheral that you are wishing to use.")
 
 
 if __name__=="__main__":
