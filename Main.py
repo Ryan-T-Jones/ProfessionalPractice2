@@ -40,5 +40,5 @@ def main():
     
         else:
             print("Please select an option from the above list 1-5")
-Login()
+login()
 main()
