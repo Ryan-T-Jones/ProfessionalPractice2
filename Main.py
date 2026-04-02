@@ -6,6 +6,7 @@ import os
 import hashlib
 
 def main():
+    login()
     while True:
         print("what problem do you have today?")
         print("1. Hardware Support")
@@ -39,4 +40,5 @@ def main():
     
         else:
             print("Please select an option from the above list 1-5")
+Login()
 main()
