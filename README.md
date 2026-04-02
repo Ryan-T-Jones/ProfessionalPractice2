@@ -4,3 +4,8 @@ A chatbot designed to help users diagnose any problems that are currently being 
 to run the chatbot:
 download the files into a folder labelled chatbot on your C drive
 open command line and type the command 'python C:/chatbot/Main.py'
+
+When greeted with a login prompt, the base username and password is:
+'Username'
+'Password'
+These can later be updated and deleted once onto the software
