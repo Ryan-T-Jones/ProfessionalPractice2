@@ -1,4 +1,3 @@
-import Main
 def hardware():
     print("You have selected Option 1: Hardware support.")
     print("which category dop you need help with:\n"
@@ -18,7 +17,7 @@ def hardware():
         peripheral()
 
     elif Choice ==3:
-        Main.main()
+        return
     
     else:
         print("please select either 1-3:")
@@ -63,7 +62,7 @@ def computerSystem():
         "Always ensure that there is plenty of spare space in your drive because, if its too full it will slow down.")
    
     elif Choice1==5:
-        Main.main()
+        return
     
     else:
         print("please select an option between 1-5")
